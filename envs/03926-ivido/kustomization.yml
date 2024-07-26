@@ -5,10 +5,9 @@
 # License (version 2) as published by the FSF - Free Software
 # Foundation.
 
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: wazuh-manager-worker
-  namespace: wazuh
-spec:
-  replicas: 1
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: wazuh
+resources:
+- ./wazuh-ns.yaml
+- ../../wazuh/kustomization.yml
