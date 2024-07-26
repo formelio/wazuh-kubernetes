@@ -10,4 +10,4 @@ kind: Kustomization
 namespace: wazuh
 resources:
 - ./wazuh-ns.yaml
-- ../../wazuh/kustomization.yml
+- ../../wazuh
